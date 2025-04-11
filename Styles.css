@@ -1,0 +1,121 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --text: #2b2d42;
+    --background: #f8f9fa;
+    --card: #ffffff;
+    --border: #e9ecef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+    transition: all 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.language-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.toggle-btn {
+    background: var(--border);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.toggle-btn:hover {
+    background: #e2e6ea;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button.calculate {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.calculate:hover {
+    background: var(--secondary);
+}
+
+#result {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f1f8fe;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.result-item {
+    margin-bottom: 12px;
+}
+
+.result-item strong {
+    color: var(--primary);
+}
+
+.subtraction-steps {
+    margin-top: 16px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
