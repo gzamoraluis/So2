@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrel Topping Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-toggle">
+            <button class="toggle-btn" id="languageToggle">
+                <span id="languageText">Español</span> 🌐
+            </button>
+        </div>
+
+        <h1 id="appTitle">Barrel Topping Calculator</h1>
+
+        <div class="form-group">
+            <label for="gallons" id="gallonsLabel">Gallons used:</label>
+            <input type="number" id="gallons" step="0.01" min="0" placeholder="e.g., 3">
+        </div>
+
+        <div class="form-group">
+            <label for="barrelBatches" id="barrelsLabel">Barrel batches (comma-separated):</label>
+            <input type="text" id="barrelBatches" placeholder="e.g., 11, 3, 5">
+        </div>
+
+        <button class="calculate" id="calculateBtn">Calculate</button>
+
+        <div id="result" style="display: none;">
+            <div class="result-item">
+                <strong id="totalBarrelsText">Total barrels:</strong> <span id="totalBarrels"></span>
+            </div>
+            <div class="result-item">
+                <strong id="perBarrelText">Gallons per barrel (unrounded):</strong> <span id="perBarrel"></span>
+            </div>
+            <h3 id="distributionTitle">Distribution per batch:</h3>
+            <div id="batchResults"></div>
+            <div class="subtraction-steps">
+                <h4 id="subtractionTitle">Subtraction Steps:</h4>
+                <div id="subtractionSteps"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 id="so2Title">SO₂ Calculator</h2>
+        <div class="form-group">
+            <label for="barrelType">Liters of wine:</label>
+            <input type="number" id="barrelType" placeholder="e.g., 225">
+        </div>
+
+        <div class="form-group">
+            <label for="ppm">Desired PPM:</label>
+            <input type="number" id="ppm" placeholder="e.g., 40">
+        </div>
+
+        <div class="form-group">
+            <label for="so2Percent">% SO₂ Solution (e.g., 10% = 10):</label>
+            <input type="number" id="so2Percent" placeholder="e.g., 10">
+        </div>
+
+        <div class="form-group">
+            <strong>Amount to Add (ml):</strong> <span id="so2Amount"></span>
+        </div>
+
+        <div class="form-group" id="calculationDetails"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
